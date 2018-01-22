@@ -5,8 +5,14 @@ const cheerio = require('cheerio');
 const app = express();
 
 app.get('/', (req, res) => {
-  url = 'https://www.copart.com/lotSearchResults/?free=true&query=chevy%20tahoe&page=1';
-  request(url, (err, res, html) => {
+  const options = {
+    url: 'https://www.copart.com/lotSearchResults/?free=true&query=chevy%20tahoe&page=1',
+    headers: {
+      'User-Agent':
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36',
+    },
+  };
+  request(options, (err, res, html) => {
     if (!err) {
       const $ = cheerio.load(html);
       let price, year, model;
@@ -22,7 +28,6 @@ app.get('/', (req, res) => {
       //   console.log(model);
       //   console.log(data);
       // });
-      //need to spoof user agent
       console.log(html);
     }
   });
