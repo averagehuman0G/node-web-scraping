@@ -1,0 +1,27 @@
+{
+  "name": "node-web-scraping",
+  "version": "1.0.0",
+  "description": "Scrape the web with Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathanv3232/node-web-scraping.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Jonathan Vargas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathanv3232/node-web-scraping/issues"
+  },
+  "homepage": "https://github.com/jonathanv3232/node-web-scraping#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}
